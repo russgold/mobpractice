@@ -14,6 +14,6 @@ public class TicTacToeTest {
 
   @Test
   public void afterFirstMove_boardIsNotEmpty() {
-    game.
+    assertEquals(game.currentPlayer(), Player.X);
   }
 }
