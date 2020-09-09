@@ -33,4 +33,12 @@ public class TicTacToeTest {
 
     assertSame(game.getMove(1), Player.X);
   }
+
+  @Test
+  public void whenMoveMade_currentPlayerIsO() {
+    game.place(1);
+
+    assertEquals(game.currentPlayer(), Player.O);
+
+  }
 }

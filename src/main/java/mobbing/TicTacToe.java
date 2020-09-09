@@ -17,6 +17,7 @@ public class TicTacToe {
 
   public void place(int i) {
     board[i] = currentPlayer;
+//    currentPlayer =
   }
 
   public Player getMove(int i) {
