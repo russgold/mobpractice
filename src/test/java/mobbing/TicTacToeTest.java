@@ -49,6 +49,13 @@ public class TicTacToeTest {
     game.place(2);
 
     assertThat(game.totalMarks(), equalTo(2));
+  }
 
+  @Test
+  public void afterAnyTwoMoves_noWinner() {
+    game.place(1);
+    game.place(2);
+
+    assertTrue(game.getWinner() == null);
   }
 }
