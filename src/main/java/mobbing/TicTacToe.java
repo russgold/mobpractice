@@ -3,8 +3,11 @@ package mobbing;
 import java.util.Arrays;
 import java.util.Objects;
 
+import static mobbing.Player.O;
+import static mobbing.Player.X;
+
 public class TicTacToe {
-  private Player currentPlayer = Player.X;
+  private Player currentPlayer = X;
   private Player[] board = new Player[9];
 
   public boolean isEmpty() {
@@ -17,10 +20,14 @@ public class TicTacToe {
 
   public void place(int i) {
     board[i] = currentPlayer;
-//    currentPlayer =
+    currentPlayer = currentPlayer == X ? O : X;
   }
 
   public Player getMove(int i) {
     return board[i];
+  }
+
+  public int totalMarks() {
+    return (int) Arrays.stream(board).filter(Objects::nonNull).count();
   }
 }
